@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package classy;
+import java.util.Random;
 
 /**
  *
@@ -25,16 +26,18 @@ abstract public class Alg {
 
     protected int[] best_sol;
     protected int best_sol_val;
+    protected Random rand;
 
     /**
      * Matica vzdialeností "každý s každým" (medzi každou dvojicou vrcholov).
      */
     protected int [][] D;
 
-    public Alg(int p, int pocVrch, int[][] D) {
+    public Alg(int p, int pocVrch, int[][] D, Random rand) {
         this.p = p;
         this.pocVrch = pocVrch;
         this.D = D;
+        this.rand = rand;
         best_sol = new int[p];
         best_sol_val = Integer.MAX_VALUE;
     }

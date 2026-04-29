@@ -31,7 +31,6 @@ public class Main {
         
         
         
-        
         // Pokračovať v implementácií GA.
         
         System.out.println("Cv8...");                
