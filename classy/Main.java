@@ -5,6 +5,7 @@
 package classy;
 
 import java.io.FileNotFoundException;
+import java.util.Random;
 
 /**
  *
@@ -27,12 +28,10 @@ public class Main {
         }
         sit.GetMatrixI(tnn, tnn, R, C, D);
         // Matica vzdialeností D je naplnená.
-        
-        
-        
-        
-        // Pokračovať v implementácií GA.
-        
-        System.out.println("Cv8...");                
+
+        Random rand = new Random();
+        rand.setSeed(42);
+        GenAlg gen_alg = new GenAlg(2, 4, tnn, D, 100, 25, 40, 8, rand);
+        gen_alg.vyriesSa();
     }
 }

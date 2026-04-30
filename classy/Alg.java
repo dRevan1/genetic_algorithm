@@ -33,12 +33,12 @@ abstract public class Alg {
      */
     protected int [][] D;
 
-    public Alg(int p, int pocVrch, int[][] D, Random rand) {
+    public Alg(int p, int centres, int pocVrch, int[][] D, Random rand) {
         this.p = p;
         this.pocVrch = pocVrch;
         this.D = D;
         this.rand = rand;
-        best_sol = new int[p];
+        best_sol = new int[centres];
         best_sol_val = Integer.MAX_VALUE;
     }
 
